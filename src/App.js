@@ -7,12 +7,12 @@ import Counter from './Counter';
 class App extends Component {
   render() {
     return (
-      <fragment>
+      <div>
         <MyName name="리액트"></MyName>
         <MyName></MyName>
         <MyNameF name="test"></MyNameF>
         <Counter></Counter>
-      </fragment>
+      </div>
     );
   }
 }
