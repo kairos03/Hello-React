@@ -52,7 +52,17 @@ class PhoneInfo extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(!this.state.editing
+       && !nextState.editing
+       && nextProps.info === this.props.info){
+         return false;
+       } 
+    return true;
+  }
+
   render() {
+    console.log("render PhonInfo" + this.props.info.id);
     const style = {
       border: '1px solid black',
       padding: '8px',
